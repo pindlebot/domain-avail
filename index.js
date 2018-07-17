@@ -1,4 +1,4 @@
-const werist = require('node-werist')
+const werist = require('whois-2')
 
 const whoisResolve = (name) => {
   return new Promise((resolve, reject) => {
