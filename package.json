@@ -1,0 +1,9 @@
+{
+  "name": "domain-avail",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "node-werist": "^0.3.2"
+  }
+}
