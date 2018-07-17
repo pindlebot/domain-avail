@@ -2,16 +2,9 @@
 # yarn lockfile v1
 
 
-bindings@^1.3.0:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/bindings/-/bindings-1.3.0.tgz#b346f6ecf6a95f5a815c5839fc7cdb22502f1ed7"
-
-detect-character-encoding@0.6.0:
+chardet@^0.6.0:
   version "0.6.0"
-  resolved "https://registry.yarnpkg.com/detect-character-encoding/-/detect-character-encoding-0.6.0.tgz#52cbce9ce3f94ee76aefbcd1154b461295e9615c"
-  dependencies:
-    bindings "^1.3.0"
-    nan "^2.10.0"
+  resolved "https://registry.yarnpkg.com/chardet/-/chardet-0.6.0.tgz#9a9b264a18efeb9f797de19252fb1f2adccda616"
 
 iconv-lite@^0.4.23:
   version "0.4.23"
@@ -59,10 +52,6 @@ lodash.repeat@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/lodash.repeat/-/lodash.repeat-4.1.0.tgz#fc7de8131d8c8ac07e4b49f74ffe829d1f2bec44"
 
-nan@^2.10.0:
-  version "2.10.0"
-  resolved "https://registry.yarnpkg.com/nan/-/nan-2.10.0.tgz#96d0cd610ebd58d4b4de9cc0c6828cda99c7548f"
-
 punycode@2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.1.1.tgz#b58b010ac40c22c5657616c8d2c2c02c7bf479ec"
@@ -96,11 +85,11 @@ tldjs@2.3.1:
   dependencies:
     punycode "^1.4.1"
 
-whois-2@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/whois-2/-/whois-2-0.0.1.tgz#e29d3e2cacf641b73325bfb9456117d7eeda2b48"
+whois-2@0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/whois-2/-/whois-2-0.0.2.tgz#d8c8b165c1be1202ca00c8adefb88f6247a94450"
   dependencies:
-    detect-character-encoding "0.6.0"
+    chardet "^0.6.0"
     iconv-lite "^0.4.23"
     ip-address "5.8.9"
     punycode "2.1.1"
