@@ -85,9 +85,9 @@ tldjs@2.3.1:
   dependencies:
     punycode "^1.4.1"
 
-whois-2@0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/whois-2/-/whois-2-0.0.3.tgz#559e5a3f111bc3702b9d7bae2e6599343057e200"
+whois-2@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/whois-2/-/whois-2-0.0.4.tgz#7f277477be6ca68dee4f3eca9532d22777c25cae"
   dependencies:
     chardet "^0.6.0"
     iconv-lite "^0.4.23"
