@@ -1,14 +1,13 @@
-const werist = require('whois-2')
+const { lookup } = require('whois-2')
 
 const whoisResolve = (name) => {
   return new Promise((resolve, reject) => {
-    werist.lookup(name, function(err, data) {
-      let line = data.split(/\r\n/g)[0].trim()
-
-      if (/^[Nn][Oo][Tt]?\s/.test(line)) {
-        resolve(false)
+    lookup(name, function(err, data) {
+      let line = data.split(/\r\n/g).find(line => line !== '').trim()
+      if (/^[no]{2}t?\s/.test(line.toLowerCase())) {
+        return resolve({ available: true })
       }
-      resolve(true)
+      resolve({ available: false })
     })
   })
 }
@@ -17,19 +16,12 @@ const nativeDnsResolve = (name) => {
   return new Promise((resolve, reject) => {
     require('dns').resolve(name, (err, data) => {
       if (err) {
-        reject(err)
+        resolve({ available: true })
+      } else {
+        resolve({ available: false })
       }
-      resolve(false)
     })
   })
 }
 
-module.exports = async (name) => {
-  let available
-  try {
-    available = await nativeDnsResolve(name)
-  } catch (err) {
-    available = await whoisResolve(name)
-  }
-  return available
-}
+module.exports = whoisResolve
